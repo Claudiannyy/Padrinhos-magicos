@@ -1,0 +1,147 @@
+$cor-fundo: #111111;
+
+@mixin estilo-button {
+    font-family: "Inter", sans-serif;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    color: #FFFFFF;
+}
+
+header {
+    background-color: $cor-fundo;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
+    height: 15vh;
+
+    img {
+        width: 200px;
+        height: 80px;
+    }
+    .botoes{
+        display: flex;
+       gap:40px;
+    }
+    button {
+        @include estilo-button();
+    }
+    button:hover{
+        background-color: rgba(255, 255, 255, 0.452);
+    }
+    .acessar {
+        background-color: #DF0712;
+        width: 220px;
+        height: 62px;
+    }
+    .acessar:hover{
+        background-color: rgba(223, 7, 18, 0.8);
+    }
+
+    .entrar {
+        background-color: transparent;
+        width: 158.7px;
+        height: 62px;
+        border: 1px solid white;
+
+    }
+}
+
+main {
+    height: 80vh;
+    padding: 3% 10%;
+    background-color: #181818;
+
+    .apresentacao {
+        display: flex;
+        justify-content: space-between;
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+
+        h1 {
+            font-family: Inter;
+            font-size: 40px;
+            font-weight: 700;
+            text-align: left;
+        }
+
+        h2 {
+            font-family: Inter;
+            font-size: 30px;
+            font-weight: 400;
+            text-align: left;
+
+        }
+    }
+
+    .episodios {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 0;
+
+        div {
+            width: 320px;
+        }
+
+        h3 {
+            font-family: Inter;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 43.57px;
+            text-align: left;
+
+        }
+
+        p {
+            font-family: Inter;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 29.05px;
+            text-align: left;
+
+        }
+
+        img {
+            width: 350px;
+        }
+    }
+}
+
+footer {
+    background-color: $cor-fundo;
+    height: 5vh;
+    padding: 0 8%;
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        gap: 80px;
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 43.57px;
+        text-align: center;
+
+    }
+}
